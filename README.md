@@ -29,7 +29,7 @@ vagrant box add tbk http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/
 
 * vagrant初期化
 ```sh
-vagrant init
+vagrant init tbk
 ```
 
 * vagrantfileを修正  
