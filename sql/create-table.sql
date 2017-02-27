@@ -124,3 +124,6 @@ create table comment (
 
 insert into comment values ('978-4041205570', 100001, 'これは最高！バカなの？');
 insert into comment values ('978-4041205570', 100002, '面白そうですね。');
+
+-- User Image
+alter table user add user_img varchar(256);

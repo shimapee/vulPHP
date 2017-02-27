@@ -7,14 +7,14 @@ $dao = new Dao();
 $p = $dao->getComment($isbn);
 $comBook = $dao->getCommBook($isbn);
 foreach ($comBook as $book) {
-	$isbn13 = $book['isbn13'];
-	$bookname = $book['bookname'];
-	$thumb = "<img src='http://images-jp.amazon.com/images/P/".$book['isbn10'].".09.MZZZZZZZ'>";
+  $isbn13 = $book['isbn13'];
+  $bookname = $book['bookname'];
+  $thumb = "<img src='http://images-jp.amazon.com/images/P/".$book['isbn10'].".09.MZZZZZZZ'>";
 }
 $flg = true;
 if($p == null) {
-	$alert = "コメントはまだありません。";
-	$flg = false;
+  $alert = "コメントはまだありません。";
+  $flg = false;
 }
 ?>
 <?php include('header.php'); ?>
@@ -29,21 +29,21 @@ if($p == null) {
 </div>
 <div id="wrapper">
 
-<?php 
+<?php
 if($flg) {
-	foreach ($p as $values) {
-		echo "<div class=\"question_Box\">";
-		echo "<p>". $values['user_name']."</p>";
-		
-		echo "<div class=\"question_image\"><img src=\"User.png\" alt=\"質問者の写真\"/></div>";
-		echo "<div class=\"arrow_question\">";
-		echo $values['comment'];
-		echo "</div><!-- /.arrow_question -->";
-		echo "</div><!-- /.question_Box -->";		
-		echo "<div style=\"clear: both;\"></div>";
-	}
+  foreach ($p as $values) {
+    echo "<div class=\"question_Box\">";
+    echo "<p>". $values['user_name']."</p>";
+
+    echo "<div class=\"question_image\"><img src=\"User.png\" alt=\"質問者の写真\"/></div>";
+    echo "<div class=\"arrow_question\">";
+    echo $values['comment'];
+    echo "</div><!-- /.arrow_question -->";
+    echo "</div><!-- /.question_Box -->";
+    echo "<div style=\"clear: both;\"></div>";
+  }
 } else {
-	echo "<h3>".$alert."</h3>";
+  echo "<h3>".$alert."</h3>";
 }
 ?>
 

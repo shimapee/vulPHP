@@ -1,0 +1,12 @@
+From: Webmaster@example.com
+Subject: =?UTF-8?B?Pz8/P8K0wrA/Pw==?=
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+お問い合わせいただきありがとうございました。
+後日、弊社担当者より連絡をいたしますので、
+今しばらくお待ち頂ますようお願い申し上げます。
+
+なお、本メールは自動配信メールになりますので、
+本アドレスに返信いただいてもお答えできませんので
+予めご了承ください。
