@@ -55,6 +55,9 @@ foreach ($comBook as $book) {
     var chk = $("textarea").val();
     if(!checkCommon.chkHtmlChar(chk)) {
       alert("入力不可文字が含まれています。");
+      $("button").attr("disabled","disabled");
+    } else {
+      $("button").removeAttr("disabled");
     }
   });
 
