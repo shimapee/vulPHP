@@ -9,6 +9,7 @@
 <!-- JavaScript -->
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/checkCommon.js"></script>
 </head>
 <body>
 <!-- navigation -->

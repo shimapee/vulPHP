@@ -48,6 +48,23 @@ $_SESSION['menu'] = 1;
     </div>
   </form>
 </div>
-
+<script>
+$("#isbn13").on("focusout", function {
+  var tmp = checkCommon.escapeHtml($("#isbn13").val());
+  $("#isbn13").val(tmp);
+});
+$("#isbn10").on("focusout", function {
+  var tmp = checkCommon.escapeHtml($("#isbn10").val());
+  $("#isbn10").val(tmp);
+});
+$("#bookname").on("focusout", function {
+  var tmp = checkCommon.escapeHtml($("#bookname").val());
+  $("#bookname").val(tmp);
+});
+$("#author").on("focusout", function {
+  var tmp = checkCommon.escapeHtml($("#author").val());
+  $("#author").val(tmp);
+});
+</script>
 </body>
 </html>
