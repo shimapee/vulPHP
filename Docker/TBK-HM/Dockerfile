@@ -14,7 +14,8 @@ sed -i -e "$ a \[client]\ndefault-character-set=utf8" /etc/my.cnf && \
 service mysqld start && \
 git clone https://github.com/shimapee/vulPHP.git /var/tmp/tbkdemo && \
 mysql -u root < /var/tmp/tbkdemo/sql/create-table.sql && \
-cp -r /var/tmp/tbkdemo/TBK-HM /var/www/html
+cp -r /var/tmp/tbkdemo/TBK-HM /var/www/html && \
+chown -R apache:apache /var/tmp/tbkdemo/TBK-HM 
 
 EXPOSE 80
 
