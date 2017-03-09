@@ -50,6 +50,14 @@ foreach ($comBook as $book) {
     </div>
   </form>
 </div>
+<script>
+  $("textarea").on("focusout", function(){
+    var chk = $("textarea").val();
+    if(!checkCommon.chkHtmlChar(chk)) {
+      alert("入力不可文字が含まれています。");
+    }
+  });
 
+</script>
 </body>
 </html>

@@ -250,6 +250,11 @@ var checkCommon = (function(){
 
   };
 
+  // HTML文字チェック
+  var chkHtmlChar = function(data) {
+    return glbRegexEscape.exec(data) == null;
+  };
+
   return {
     chkDateYM: chkDateYM,
     chkDateYMD: chkDateYMD,
@@ -265,5 +270,6 @@ var checkCommon = (function(){
     chkMailAddr: chkMailAddr,
     chkContrast: chkContrast,
     escapeHtml: escapeHtml,
+    chkHtmlChar: chkHtmlChar,
   };
 }());
