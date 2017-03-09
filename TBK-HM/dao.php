@@ -154,7 +154,8 @@ class Dao {
           user_email = '". $data['mail'] ."',
           user_name = '". $data['name'] ."',
           user_birthday = '". $data['birth'] ."',
-          user_address = '". $data['add'] ."'
+          user_address = '". $data['add'] ."',
+          user_img = '". $data["image"]."'
           where user_id = ". $data['uid'];
     return $this->pdo->exec($sql);
 

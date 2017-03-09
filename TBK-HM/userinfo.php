@@ -2,9 +2,17 @@
 session_start();
 $_SESSION['menu'] = 9;
 include('header.php');
-
+require_once 'dao.php';
+$dao = new Dao();
+foreach ($dao->getUserDate($id) as $udata) {
+  if($udata['user_img'] == null) {
+    $temp = "img/User.png";
+  } else {
+    $temp = "img/". $udata['user_img'];
+  }
+}
   $temp_user = $_SESSION['username'];
-  $temp = "img/User.png";
+  //$temp = "img/User.png";
 ?>
 <!-- booklist -->
 <div class="container-fluid">
@@ -18,7 +26,7 @@ include('header.php');
       <img src=<?php echo($temp);?> class="img-circle" style="width: 150px;height: 150px;">
   </div>
 
-  <form class="form-horizontal" style="margin-top: 30px;" action="userinfo_upd.php" method="post">
+  <form class="form-horizontal" style="margin-top: 30px;" action="userinfo_upd.php" method="post" enctype="multipart/form-data">
     <div class="form-group">
       <label for="inputName" class="col-md-3 col-md-offset-2 control-label">名前</label>
       <div class="col-md-3">
