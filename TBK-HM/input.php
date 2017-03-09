@@ -12,7 +12,7 @@ $_SESSION['menu'] = 1;
   </div>
   <div class="col-md-offset-3"></div>
   </div>
-  <form class="form-horizontal" style="margin-top: 30px;" action="confirm.php" method="get">
+  <form class="form-horizontal" style="margin-top: 30px;" action="confirm.php" method="post">
     <div class="form-group">
       <label for="isbn13" class="col-md-3 col-md-offset-2 control-label">ISBN13</label>
       <div class="col-md-3">

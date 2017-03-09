@@ -1,9 +1,9 @@
 <?php
 session_start();
-$isbn13 = $_GET['isbn13'];
-$isbn10 = $_GET['isbn10'];
-$bookname = $_GET['bookname'];
-$author = $_GET['author'];
+$isbn13 = $_POST['isbn13'];
+$isbn10 = $_POST['isbn10'];
+$bookname = $_POST['bookname'];
+$author = $_POST['author'];
 $thumb_lg = "http://images-jp.amazon.com/images/P/" . $isbn10 . ".09.LZZZZZZZ";
 ?>
 <?php include('header.php'); ?>
@@ -50,7 +50,7 @@ $thumb_lg = "http://images-jp.amazon.com/images/P/" . $isbn10 . ".09.LZZZZZZZ";
     <img src=<?php echo $thumb_lg;?>>
   </div>
   </div>
-  <form class="form-horizontal" style="margin-top: 30px;" action="register.php" method="get">
+  <form class="form-horizontal" style="margin-top: 30px;" action="register.php" method="post">
     <div class="form-group">
       <input type="hidden" name="isbn13" value=<?php echo $isbn13;?>>
       <input type="hidden"  name="isbn10" value=<?php echo $isbn10;?>>
