@@ -15,7 +15,7 @@ service mysqld start && \
 git clone https://github.com/shimapee/vulPHP.git /var/tmp/tbkdemo && \
 mysql -u root < /var/tmp/tbkdemo/sql/create-table.sql && \
 cp -r /var/tmp/tbkdemo/TBK-HM /var/www/html && \
-chown -R apache:apache /var/tmp/tbkdemo/TBK-HM 
+chown -R apache:apache /var/www/html/TBK-HM 
 
 EXPOSE 80
 
