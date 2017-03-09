@@ -4,7 +4,7 @@ $_SESSION['menu'] = 9;
 include('header.php');
 require_once 'dao.php';
 $dao = new Dao();
-foreach ($dao->getUserDate($id) as $udata) {
+foreach ($dao->getUserDate($_SESSION['user_id']) as $udata) {
   if($udata['user_img'] == null) {
     $temp = "img/User.png";
   } else {
